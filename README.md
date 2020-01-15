@@ -1,3 +1,15 @@
+## Clickable Dropdown with React 
+Live demo [here](https://codepen.io/davidDeSar/pen/eYmjerm)
+
+The general idea of making this dropdown is using stateful component and set the init display state (`displayState`). 
+* By default the `displayState` will be `false`, which indicates that the inner content is hidden. 
+* Then build the `onClickHandler()` which `setState` the `displayState`. 
+* In the `render()`, create the `displayStyle` object with `display: none` as init value. 
+* Conditionally check the `displayState`, if `displayState` is `true`, change the `display: block` in `displayStyle`. 
+* And finally, bind the `displayStyle` to `style` property in the inner component.
+<br/>
+
+## Read More: 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
