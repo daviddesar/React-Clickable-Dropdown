@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import "./app.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    displayState: false
+  }
+  oncClickHandler = () => {
+    this.setState({displayState: !this.state.displayState})
+  }
+  render() {
+    let displayStyle = {display: 'none'}
+    if (this.state.displayState) {
+      displayStyle['display'] = 'block'
+    }
+    return (
+      <div className="parentDiv">
+        <span className="clickTrigger" onClick={() => this.oncClickHandler()
+        }>Click me</span>
+        <div className="innerContent" style={displayStyle}>
+          <p>Hi</p>
+          <p>I am dropdown inner content</p>
+        </div>
+      </div>
+    )
+  }
 }
-
-export default App;

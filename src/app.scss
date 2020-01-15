@@ -1,0 +1,11 @@
+.parentDiv {
+  margin: 50px auto;
+  width: 30%;
+  text-align: center;
+  border: 1px solid red;
+  .clickTrigger {
+    cursor: pointer;
+    font-weight: bold;
+    color: blue;
+  }
+}
